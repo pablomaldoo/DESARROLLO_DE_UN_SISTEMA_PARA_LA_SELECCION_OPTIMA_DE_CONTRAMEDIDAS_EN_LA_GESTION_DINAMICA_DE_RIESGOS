@@ -1,0 +1,4303 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://www.semanticweb.org/carmen/ontologies/2023/6/interoperable_thesis"
+         xmlns="http://www.semanticweb.org/carmen/ontologies/2023/6/interoperable_thesis#">
+
+<owl:Ontology rdf:about="http://www.semanticweb.org/carmen/ontologies/2023/6/interoperable_thesis"/>
+
+<owl:ObjectProperty rdf:about="#affects">
+  <owl:inverseOf rdf:resource="#is_affected_by"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#is_affected_by"/>
+
+<owl:ObjectProperty rdf:about="#exploits"/>
+
+<owl:ObjectProperty rdf:about="#generates"/>
+
+<owl:ObjectProperty rdf:about="#has_subcriteria"/>
+
+<owl:ObjectProperty rdf:about="#involves"/>
+
+<owl:ObjectProperty rdf:about="#is_subcriteria_of"/>
+
+<owl:ObjectProperty rdf:about="#protects"/>
+
+<owl:ObjectProperty rdf:about="#reacts_against"/>
+
+<owl:ObjectProperty rdf:about="#related_to"/>
+
+<owl:DatatypeProperty rdf:about="#a_consequence">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#asset_type">
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#asset_value"/>
+
+<owl:DatatypeProperty rdf:about="#availability"/>
+
+<owl:DatatypeProperty rdf:about="#c_consequence">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#confidentiality"/>
+
+<owl:DatatypeProperty rdf:about="#consequence_on_a">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#consequence_on_c">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#consequence_on_i">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#cpe"/>
+
+<owl:DatatypeProperty rdf:about="#cve"/>
+
+<owl:DatatypeProperty rdf:about="#cvss"/>
+
+<owl:DatatypeProperty rdf:about="#cwe"/>
+
+<owl:DatatypeProperty rdf:about="#date"/>
+
+<owl:DatatypeProperty rdf:about="#deployment_cost"/>
+
+<owl:DatatypeProperty rdf:about="#deployment_effort"/>
+
+<owl:DatatypeProperty rdf:about="#description">
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#disabled"/>
+
+<owl:DatatypeProperty rdf:about="#effectiveness"/>
+
+<owl:DatatypeProperty rdf:about="#enabled"/>
+
+<owl:DatatypeProperty rdf:about="#i_consequence">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#id"/>
+
+<owl:DatatypeProperty rdf:about="#impact"/>
+
+<owl:DatatypeProperty rdf:about="#installation_complexity"/>
+
+<owl:DatatypeProperty rdf:about="#integrity"/>
+
+<owl:DatatypeProperty rdf:about="#is_divided">
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#keywords"/>
+
+<owl:DatatypeProperty rdf:about="#methodology_risk_level"/>
+
+<owl:DatatypeProperty rdf:about="#mitigation_factor"/>
+
+<owl:DatatypeProperty rdf:about="#operation_complexity"/>
+
+<owl:DatatypeProperty rdf:about="#origin">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="#original_methodology"/>
+
+<owl:DatatypeProperty rdf:about="#original_risk_value"/>
+
+<owl:DatatypeProperty rdf:about="#peso_coste"/>
+
+<owl:DatatypeProperty rdf:about="#peso_score"/>
+
+<owl:DatatypeProperty rdf:about="#peso_tiempo"/>
+
+<owl:DatatypeProperty rdf:about="#probability"/>
+
+<owl:DatatypeProperty rdf:about="#recommendations"/>
+
+<owl:DatatypeProperty rdf:about="#residual_impact"/>
+
+<owl:DatatypeProperty rdf:about="#residual_impact_num"/>
+
+<owl:DatatypeProperty rdf:about="#residual_probability"/>
+
+<owl:DatatypeProperty rdf:about="#residual_probability_num"/>
+
+<owl:DatatypeProperty rdf:about="#residual_risk_level"/>
+
+<owl:DatatypeProperty rdf:about="#residual_risk_level_num"/>
+
+<owl:DatatypeProperty rdf:about="#risk_acceptance"/>
+
+<owl:DatatypeProperty rdf:about="#risk_level"/>
+
+<owl:DatatypeProperty rdf:about="#risk_level_num"/>
+
+<owl:DatatypeProperty rdf:about="#tactic"/>
+
+<owl:DatatypeProperty rdf:about="#time_to_be_up_and_running"/>
+
+<owl:DatatypeProperty rdf:about="#type"/>
+
+<owl:DatatypeProperty rdf:about="#weight_value"/>
+
+<owl:Class rdf:about="#Abuse_of_Access_Privileges">
+  <rdfs:subClassOf rdf:resource="#Willfull_attacks"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Infrastructure"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Location_Utilities"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#SW_APPs"/>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliberate</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Willfull_attacks">
+  <rdfs:subClassOf rdf:resource="#Threat"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Infrastructure">
+  <owl:equivalentClass>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#asset_type"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Infrastructure</owl:hasValue>
+    </owl:Restriction>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#Supporting_Asset"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#asset_type"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Infrastructure</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Location_Utilities">
+  <owl:equivalentClass>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#asset_type"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Location, Utilities</owl:hasValue>
+    </owl:Restriction>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#Supporting_Asset"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#asset_type"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Location, Utilities</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#SW_APPs">
+  <owl:equivalentClass>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#asset_type"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SW, APPs</owl:hasValue>
+    </owl:Restriction>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#Supporting_Asset"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#asset_type"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SW, APPs</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Accidental_Alteration_of_Information">
+  <rdfs:subClassOf rdf:resource="#Errors_and_unintentional_failure"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#HW_Devices_Equipment"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Infrastructure"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Location_Utilities"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Personnel"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#SW_APPs"/>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accidental</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Errors_and_unintentional_failure">
+  <rdfs:subClassOf rdf:resource="#Threat"/>
+</owl:Class>
+
+<owl:Class rdf:about="#HW_Devices_Equipment">
+  <owl:equivalentClass>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#asset_type"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HW, Devices, Equipment</owl:hasValue>
+    </owl:Restriction>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#Supporting_Asset"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#asset_type"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HW, Devices, Equipment</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Personnel">
+  <owl:equivalentClass>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#asset_type"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Personnel</owl:hasValue>
+    </owl:Restriction>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#Supporting_Asset"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#asset_type"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Personnel</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Administrator_Errors">
+  <rdfs:subClassOf rdf:resource="#Errors_and_unintentional_failure"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#HW_Devices_Equipment"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Infrastructure"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#SW_APPs"/>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accidental</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Assets">
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#asset_type"/>
+      <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#availability"/>
+      <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#confidentiality"/>
+      <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#description"/>
+      <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#integrity"/>
+      <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <owl:disjointWith rdf:resource="#Threat"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Threat">
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#affects"/>
+      <owl:someValuesFrom rdf:resource="#Supporting_Asset"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#generates"/>
+      <owl:someValuesFrom rdf:resource="#Potential_Risk"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#a_consequence"/>
+      <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#c_consequence"/>
+      <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#consequence_on_a"/>
+      <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#consequence_on_c"/>
+      <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#consequence_on_i"/>
+      <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#description"/>
+      <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#i_consequence"/>
+      <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#AttackPattern">
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#exploits"/>
+      <owl:someValuesFrom rdf:resource="#Vulnerability"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#generates"/>
+      <owl:someValuesFrom rdf:resource="#Risk_Scenario"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#cwe"/>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#description"/>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#id"/>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#recommendations"/>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Vulnerability">
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#affects"/>
+      <owl:someValuesFrom rdf:resource="#Supporting_Asset"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#cpe"/>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#cve"/>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#cvss"/>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#cwe"/>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#description"/>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#type"/>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Risk_Scenario">
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#generates"/>
+      <owl:someValuesFrom rdf:resource="#Risk"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#generates"/>
+      <owl:someValuesFrom rdf:resource="#Threat"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#involves"/>
+      <owl:someValuesFrom rdf:resource="#Primary_Asset"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#involves"/>
+      <owl:someValuesFrom rdf:resource="#Supporting_Asset"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#involves"/>
+      <owl:someValuesFrom rdf:resource="#Vulnerability"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#id"/>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#impact"/>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#probability"/>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Breach_of_Personnel_Availability">
+  <rdfs:subClassOf rdf:resource="#Errors_and_unintentional_failure"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#affects"/>
+      <owl:someValuesFrom rdf:resource="#Personnel"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accidental</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Communications_Services_Failure">
+  <rdfs:subClassOf rdf:resource="#Industrial"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#origin"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accidental</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#origin"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliberate</owl:hasValue>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#affects"/>
+      <owl:someValuesFrom rdf:resource="#Infrastructure"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Industrial">
+  <rdfs:subClassOf rdf:resource="#Threat"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Compromise_of_Service_Engine">
+  <rdfs:subClassOf rdf:resource="#Service_related_threats"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#origin"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accidental</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#origin"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliberate</owl:hasValue>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#affects"/>
+      <owl:someValuesFrom rdf:resource="#Infrastructure"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Service_related_threats">
+  <rdfs:subClassOf rdf:resource="#Threat"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Configuration_Errors">
+  <rdfs:subClassOf rdf:resource="#Errors_and_unintentional_failure"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#HW_Devices_Equipment"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Infrastructure"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#SW_APPs"/>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accidental</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Criterio_Primer_Nivel">
+  <rdfs:subClassOf rdf:resource="#System"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#has_subcriteria"/>
+      <owl:someValuesFrom rdf:resource="#Criterio_Segundo_Nivel"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <owl:disjointWith rdf:resource="#Criterio_Segundo_Nivel"/>
+</owl:Class>
+
+<owl:Class rdf:about="#System">
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#methodology_risk_level"/>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#original_methodology"/>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#residual_risk_level"/>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#risk_acceptance"/>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#risk_level"/>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Criterio_Segundo_Nivel">
+  <rdfs:subClassOf rdf:resource="#System"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#is_subcriteria_of"/>
+      <owl:someValuesFrom rdf:resource="#Criterio_Primer_Nivel"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Data_Protection_Risks">
+  <rdfs:subClassOf rdf:resource="#Service_related_threats"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#affects"/>
+      <owl:someValuesFrom rdf:resource="#Infrastructure"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accidental</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Defects_in_HW_Maintenance">
+  <rdfs:subClassOf rdf:resource="#Errors_and_unintentional_failure"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#affects"/>
+      <owl:someValuesFrom rdf:resource="#HW_Devices_Equipment"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accidental</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Defects_in_SW_Maintenance">
+  <rdfs:subClassOf rdf:resource="#Errors_and_unintentional_failure"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#affects"/>
+      <owl:someValuesFrom rdf:resource="#SW_APPs"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accidental</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Deliberate_Alteration_of_Information">
+  <rdfs:subClassOf rdf:resource="#Willfull_attacks"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#HW_Devices_Equipment"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Infrastructure"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Location_Utilities"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Personnel"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#SW_APPs"/>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliberate</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Deliberated_Destruction_of_Information">
+  <rdfs:subClassOf rdf:resource="#Willfull_attacks"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#HW_Devices_Equipment"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Infrastructure"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Location_Utilities"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Personnel"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#SW_APPs"/>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliberate</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Deliberated_Malware_Diffusion">
+  <rdfs:subClassOf rdf:resource="#Willfull_attacks"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#affects"/>
+      <owl:someValuesFrom rdf:resource="#SW_APPs"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliberate</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Deliberated_Re_Routing">
+  <rdfs:subClassOf rdf:resource="#Willfull_attacks"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Infrastructure"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#SW_APPs"/>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliberate</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Destructive_Attack">
+  <rdfs:subClassOf rdf:resource="#Willfull_attacks"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#HW_Devices_Equipment"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Location_Utilities"/>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliberate</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Disclosure_of_Information">
+  <rdfs:subClassOf rdf:resource="#Willfull_attacks"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Infrastructure"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Location_Utilities"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Personnel"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#SW_APPs"/>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliberate</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#DoS">
+  <rdfs:subClassOf rdf:resource="#Willfull_attacks"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#HW_Devices_Equipment"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Infrastructure"/>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliberate</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#E-Discovery">
+  <rdfs:subClassOf rdf:resource="#Service_related_threats"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#origin"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accidental</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#origin"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliberate</owl:hasValue>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#affects"/>
+      <owl:someValuesFrom rdf:resource="#Infrastructure"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Eavesdropping">
+  <rdfs:subClassOf rdf:resource="#Willfull_attacks"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#affects"/>
+      <owl:someValuesFrom rdf:resource="#Infrastructure"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliberate</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Electromagnetic_Emanations">
+  <rdfs:subClassOf rdf:resource="#Industrial"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#HW_Devices_Equipment"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Location_Utilities"/>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliberate</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Electromagnetic_or_Thermal_Radiation">
+  <rdfs:subClassOf rdf:resource="#Industrial"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#HW_Devices_Equipment"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Location_Utilities"/>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#origin"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accidental</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#origin"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliberate</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#origin"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Environmental</owl:hasValue>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Enemy_Overrun">
+  <rdfs:subClassOf rdf:resource="#Willfull_attacks"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#affects"/>
+      <owl:someValuesFrom rdf:resource="#Location_Utilities"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliberate</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Environmental_Pollution">
+  <rdfs:subClassOf rdf:resource="#Industrial"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#HW_Devices_Equipment"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Location_Utilities"/>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#origin"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accidental</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#origin"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliberate</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#origin"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Environmental</owl:hasValue>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Extortion">
+  <rdfs:subClassOf rdf:resource="#Willfull_attacks"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#affects"/>
+      <owl:someValuesFrom rdf:resource="#Personnel"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliberate</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Fire_Industrial">
+  <rdfs:subClassOf rdf:resource="#Industrial"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#HW_Devices_Equipment"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Location_Utilities"/>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#origin"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accidental</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#origin"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliberate</owl:hasValue>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Fire_Natural">
+  <rdfs:subClassOf rdf:resource="#Natural"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#HW_Devices_Equipment"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Location_Utilities"/>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Environmental</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Natural">
+  <rdfs:subClassOf rdf:resource="#Threat"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Flood">
+  <rdfs:subClassOf rdf:resource="#Natural"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#HW_Devices_Equipment"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Location_Utilities"/>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Environmental</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Supporting_Asset">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#asset_type"/>
+          <owl:allValuesFrom>
+            <rdfs:Datatype>
+              <owl:oneOf>
+                <rdf:Description>
+              <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HW, Devices, Equipment</rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:Description>
+              </owl:oneOf>
+            </rdfs:Datatype>
+          </owl:allValuesFrom>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#asset_type"/>
+          <owl:allValuesFrom>
+            <rdfs:Datatype>
+              <owl:oneOf>
+                <rdf:Description>
+              <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Infrastructure</rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:Description>
+              </owl:oneOf>
+            </rdfs:Datatype>
+          </owl:allValuesFrom>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#asset_type"/>
+          <owl:allValuesFrom>
+            <rdfs:Datatype>
+              <owl:oneOf>
+                <rdf:Description>
+              <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Location, Utilities</rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:Description>
+              </owl:oneOf>
+            </rdfs:Datatype>
+          </owl:allValuesFrom>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#asset_type"/>
+          <owl:allValuesFrom>
+            <rdfs:Datatype>
+              <owl:oneOf>
+                <rdf:Description>
+              <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Personnel</rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:Description>
+              </owl:oneOf>
+            </rdfs:Datatype>
+          </owl:allValuesFrom>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#asset_type"/>
+          <owl:allValuesFrom>
+            <rdfs:Datatype>
+              <owl:oneOf>
+                <rdf:Description>
+              <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SW, APPs</rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:Description>
+              </owl:oneOf>
+            </rdfs:Datatype>
+          </owl:allValuesFrom>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#Assets"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#asset_type"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HW, Devices, Equipment</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#asset_type"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Infrastructure</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#asset_type"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Location, Utilities</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#asset_type"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Personnel</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#asset_type"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SW, APPs</owl:hasValue>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#is_affected_by"/>
+      <owl:someValuesFrom rdf:resource="#Vulnerability"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#HW_Tampering">
+  <rdfs:subClassOf rdf:resource="#Willfull_attacks"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#affects"/>
+      <owl:someValuesFrom rdf:resource="#HW_Devices_Equipment"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliberate</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#HW_or_SW_Failure">
+  <rdfs:subClassOf rdf:resource="#Industrial"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#HW_Devices_Equipment"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#SW_APPs"/>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#origin"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accidental</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#origin"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliberate</owl:hasValue>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Incidence_Analysis_and_Forensic_Support">
+  <rdfs:subClassOf rdf:resource="#Service_related_threats"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#affects"/>
+      <owl:someValuesFrom rdf:resource="#Infrastructure"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Incident">
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#affects"/>
+      <owl:someValuesFrom rdf:resource="#Assets"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#exploits"/>
+      <owl:someValuesFrom rdf:resource="#Vulnerability"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#generates"/>
+      <owl:someValuesFrom rdf:resource="#Threat"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#related_to"/>
+      <owl:someValuesFrom rdf:resource="#AttackPattern"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#related_to"/>
+      <owl:someValuesFrom rdf:resource="#Technique"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#date"/>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#description"/>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#id"/>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Technique">
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#related_to"/>
+      <owl:someValuesFrom rdf:resource="#AttackPattern"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#id"/>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#tactic"/>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#IncidenteBT">
+  <rdfs:subClassOf rdf:resource="#Incident"/>
+</owl:Class>
+
+<owl:Class rdf:about="#IncidenteCS">
+  <rdfs:subClassOf rdf:resource="#Incident"/>
+</owl:Class>
+
+<owl:Class rdf:about="#IncidenteWF">
+  <rdfs:subClassOf rdf:resource="#Incident"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Info_Data">
+  <owl:equivalentClass>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#asset_type"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Info, Data</owl:hasValue>
+    </owl:Restriction>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#Primary_Asset"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#asset_type"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Info, Data</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <owl:disjointWith rdf:resource="#Processes_Functions_Services"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Primary_Asset">
+  <owl:equivalentClass>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#asset_type"/>
+          <owl:allValuesFrom>
+            <rdfs:Datatype>
+              <owl:oneOf>
+                <rdf:Description>
+              <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Info, Data</rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:Description>
+              </owl:oneOf>
+            </rdfs:Datatype>
+          </owl:allValuesFrom>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#asset_type"/>
+          <owl:allValuesFrom>
+            <rdfs:Datatype>
+              <owl:oneOf>
+                <rdf:Description>
+              <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Processes, Functions, Services</rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:Description>
+              </owl:oneOf>
+            </rdfs:Datatype>
+          </owl:allValuesFrom>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#Assets"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#asset_type"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Info, Data</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#asset_type"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Processes, Functions, Services</owl:hasValue>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#related_to"/>
+      <owl:someValuesFrom rdf:resource="#Supporting_Asset"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <owl:disjointWith rdf:resource="#Supporting_Asset"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Processes_Functions_Services">
+  <owl:equivalentClass>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#asset_type"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Processes, Functions, Services</owl:hasValue>
+    </owl:Restriction>
+  </owl:equivalentClass>
+  <rdfs:subClassOf rdf:resource="#Primary_Asset"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#asset_type"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Processes, Functions, Services</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Information_Leaks">
+  <rdfs:subClassOf rdf:resource="#Errors_and_unintentional_failure"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#HW_Devices_Equipment"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Infrastructure"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Location_Utilities"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Personnel"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#SW_APPs"/>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accidental</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Insecure_Interfaces_and_APIs">
+  <rdfs:subClassOf rdf:resource="#Service_related_threats"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#affects"/>
+      <owl:someValuesFrom rdf:resource="#Infrastructure"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accidental</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Insecure_or_Ineffective_Deletion_of_Data">
+  <rdfs:subClassOf rdf:resource="#Service_related_threats"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#origin"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accidental</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#origin"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliberate</owl:hasValue>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#affects"/>
+      <owl:someValuesFrom rdf:resource="#Infrastructure"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Interruption_of_other_services">
+  <rdfs:subClassOf rdf:resource="#Industrial"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Infrastructure"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Location_Utilities"/>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#origin"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accidental</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#origin"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliberate</owl:hasValue>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Isolation_Failure">
+  <rdfs:subClassOf rdf:resource="#Service_related_threats"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#origin"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accidental</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#origin"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliberate</owl:hasValue>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#affects"/>
+      <owl:someValuesFrom rdf:resource="#Infrastructure"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Lock_in">
+  <rdfs:subClassOf rdf:resource="#Service_related_threats"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#affects"/>
+      <owl:someValuesFrom rdf:resource="#Infrastructure"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accidental</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Loss_of_Governance">
+  <rdfs:subClassOf rdf:resource="#Service_related_threats"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#origin"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accidental</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#origin"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliberate</owl:hasValue>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#affects"/>
+      <owl:someValuesFrom rdf:resource="#Infrastructure"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Major_Accident">
+  <rdfs:subClassOf rdf:resource="#Natural"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#HW_Devices_Equipment"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Location_Utilities"/>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Environmental</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Management_Interface_Compromise">
+  <rdfs:subClassOf rdf:resource="#Service_related_threats"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#origin"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accidental</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#origin"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliberate</owl:hasValue>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#affects"/>
+      <owl:someValuesFrom rdf:resource="#Infrastructure"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Manipulation_of_Activity_Records">
+  <rdfs:subClassOf rdf:resource="#Willfull_attacks"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#HW_Devices_Equipment"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Infrastructure"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#SW_APPs"/>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliberate</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Manipulation_of_Configuration_Files">
+  <rdfs:subClassOf rdf:resource="#Willfull_attacks"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#HW_Devices_Equipment"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Infrastructure"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#SW_APPs"/>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliberate</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Masquerading_of_Identity">
+  <rdfs:subClassOf rdf:resource="#Willfull_attacks"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Infrastructure"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#SW_APPs"/>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliberate</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Media_or_Equipment_Degradation">
+  <rdfs:subClassOf rdf:resource="#Industrial"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#origin"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accidental</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#origin"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliberate</owl:hasValue>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#affects"/>
+      <owl:someValuesFrom rdf:resource="#HW_Devices_Equipment"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Misuse">
+  <rdfs:subClassOf rdf:resource="#Willfull_attacks"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Infrastructure"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Location_Utilities"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#SW_APPs"/>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliberate</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Mitigations">
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#generates"/>
+      <owl:someValuesFrom rdf:resource="#Residual_Risk"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#protects"/>
+      <owl:someValuesFrom rdf:resource="#Assets"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#reacts_against"/>
+      <owl:someValuesFrom rdf:resource="#Potential_Risk"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#deployment_cost"/>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#deployment_effort"/>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#description"/>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#disabled"/>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#effectiveness"/>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#enabled"/>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#id"/>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#impact"/>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#installation_complexity"/>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#keywords"/>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#mitigation_factor"/>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#operation_complexity"/>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#time_to_be_up_and_running"/>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#type"/>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Residual_Risk">
+  <rdfs:subClassOf rdf:resource="#Risk"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#related_to"/>
+      <owl:someValuesFrom rdf:resource="#Mitigations"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#related_to"/>
+      <owl:someValuesFrom rdf:resource="#Potential_Risk"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#residual_risk_level"/>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Potential_Risk">
+  <rdfs:subClassOf rdf:resource="#Risk"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#generates"/>
+      <owl:someValuesFrom rdf:resource="#Residual_Risk"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#is_affected_by"/>
+      <owl:someValuesFrom rdf:resource="#Mitigations"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <owl:disjointWith rdf:resource="#Residual_Risk"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Monitoring_Errors">
+  <rdfs:subClassOf rdf:resource="#Errors_and_unintentional_failure"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#HW_Devices_Equipment"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Infrastructure"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#SW_APPs"/>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accidental</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Organisational_Deficiencies">
+  <rdfs:subClassOf rdf:resource="#Errors_and_unintentional_failure"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#affects"/>
+      <owl:someValuesFrom rdf:resource="#Personnel"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accidental</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Other_Industrial">
+  <rdfs:subClassOf rdf:resource="#Industrial"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#HW_Devices_Equipment"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Location_Utilities"/>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#origin"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accidental</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#origin"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliberate</owl:hasValue>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Other_Natural">
+  <rdfs:subClassOf rdf:resource="#Natural"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#HW_Devices_Equipment"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Location_Utilities"/>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Environmental</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Risk">
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#risk_level"/>
+      <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Power_Interruption">
+  <rdfs:subClassOf rdf:resource="#Industrial"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#origin"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accidental</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#origin"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliberate</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#origin"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Environmental</owl:hasValue>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#affects"/>
+      <owl:someValuesFrom rdf:resource="#HW_Devices_Equipment"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Re_Routing_Errors">
+  <rdfs:subClassOf rdf:resource="#Errors_and_unintentional_failure"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Infrastructure"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#SW_APPs"/>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accidental</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Repudiation">
+  <rdfs:subClassOf rdf:resource="#Willfull_attacks"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#affects"/>
+      <owl:someValuesFrom rdf:resource="#Infrastructure"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliberate</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Retrieval_of_Recycled_Media">
+  <rdfs:subClassOf rdf:resource="#Errors_and_unintentional_failure"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#affects"/>
+      <owl:someValuesFrom rdf:resource="#HW_Devices_Equipment"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accidental</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Risk_from_Changes_of_Jurisdiction">
+  <rdfs:subClassOf rdf:resource="#Service_related_threats"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#origin"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accidental</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#origin"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliberate</owl:hasValue>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#affects"/>
+      <owl:someValuesFrom rdf:resource="#Infrastructure"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#SW_Tampering">
+  <rdfs:subClassOf rdf:resource="#Willfull_attacks"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#origin"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accidental</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#origin"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliberate</owl:hasValue>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#affects"/>
+      <owl:someValuesFrom rdf:resource="#SW_APPs"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Sequence_Alteration">
+  <rdfs:subClassOf rdf:resource="#Willfull_attacks"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Infrastructure"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#SW_APPs"/>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliberate</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Sequence_Errors">
+  <rdfs:subClassOf rdf:resource="#Errors_and_unintentional_failure"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Infrastructure"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#SW_APPs"/>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accidental</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Social_Engineering">
+  <rdfs:subClassOf rdf:resource="#Willfull_attacks"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#affects"/>
+      <owl:someValuesFrom rdf:resource="#Personnel"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliberate</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Software_Vulnerabilities">
+  <rdfs:subClassOf rdf:resource="#Errors_and_unintentional_failure"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#affects"/>
+      <owl:someValuesFrom rdf:resource="#SW_APPs"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accidental</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Staff_Shortage">
+  <rdfs:subClassOf rdf:resource="#Willfull_attacks"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#affects"/>
+      <owl:someValuesFrom rdf:resource="#Personnel"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliberate</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#System_Failure_due_to_Exhaustion_of_Resources">
+  <rdfs:subClassOf rdf:resource="#Errors_and_unintentional_failure"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#HW_Devices_Equipment"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Infrastructure"/>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accidental</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Theft_of_Equipment">
+  <rdfs:subClassOf rdf:resource="#Willfull_attacks"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#affects"/>
+      <owl:someValuesFrom rdf:resource="#HW_Devices_Equipment"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliberate</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Theft_of_Media_Documents">
+  <rdfs:subClassOf rdf:resource="#Willfull_attacks"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#affects"/>
+      <owl:someValuesFrom rdf:resource="#HW_Devices_Equipment"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliberate</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Traffic_Analysis">
+  <rdfs:subClassOf rdf:resource="#Willfull_attacks"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#affects"/>
+      <owl:someValuesFrom rdf:resource="#Infrastructure"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliberate</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Unauthorised_Access">
+  <rdfs:subClassOf rdf:resource="#Willfull_attacks"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#HW_Devices_Equipment"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Infrastructure"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Location_Utilities"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#SW_APPs"/>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliberate</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Unintentional_Destruction_of_Information">
+  <rdfs:subClassOf rdf:resource="#Errors_and_unintentional_failure"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#HW_Devices_Equipment"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Infrastructure"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Location_Utilities"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Personnel"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#SW_APPs"/>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accidental</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Unintentional_Malware_Diffusion">
+  <rdfs:subClassOf rdf:resource="#Errors_and_unintentional_failure"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#affects"/>
+      <owl:someValuesFrom rdf:resource="#SW_APPs"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accidental</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Unknown">
+  <rdfs:subClassOf rdf:resource="#Unknown_gen"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Unknown_gen">
+  <rdfs:subClassOf rdf:resource="#Threat"/>
+</owl:Class>
+
+<owl:Class rdf:about="#Unsuitable_Temperature_or_Humidity_Conditions">
+  <rdfs:subClassOf rdf:resource="#Industrial"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#origin"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accidental</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#origin"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliberate</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#origin"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Environmental</owl:hasValue>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#affects"/>
+      <owl:someValuesFrom rdf:resource="#HW_Devices_Equipment"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#User_Errors">
+  <rdfs:subClassOf rdf:resource="#Errors_and_unintentional_failure"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#HW_Devices_Equipment"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Infrastructure"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#SW_APPs"/>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#origin"/>
+      <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accidental</owl:hasValue>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#User_Privacy_and_Secondary_Usage_of_Data">
+  <rdfs:subClassOf rdf:resource="#Service_related_threats"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#affects"/>
+      <owl:someValuesFrom rdf:resource="#Infrastructure"/>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Water_Damage">
+  <rdfs:subClassOf rdf:resource="#Industrial"/>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:intersectionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_a"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_c"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#consequence_on_i"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</owl:hasValue>
+        </owl:Restriction>
+      </owl:intersectionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#HW_Devices_Equipment"/>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#affects"/>
+          <owl:someValuesFrom rdf:resource="#Location_Utilities"/>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#origin"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accidental</owl:hasValue>
+        </owl:Restriction>
+        <owl:Restriction>
+          <owl:onProperty rdf:resource="#origin"/>
+          <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deliberate</owl:hasValue>
+        </owl:Restriction>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="#PC1">
+  <rdf:type rdf:resource="#Assets"/>
+  <rdf:type rdf:resource="#Supporting_Asset"/>
+  <rdf:type rdf:resource="#HW_Devices_Equipment"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#PC2">
+  <rdf:type rdf:resource="#Assets"/>
+  <rdf:type rdf:resource="#Supporting_Asset"/>
+  <rdf:type rdf:resource="#HW_Devices_Equipment"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Movil">
+  <rdf:type rdf:resource="#Assets"/>
+  <rdf:type rdf:resource="#Supporting_Asset"/>
+  <rdf:type rdf:resource="#HW_Devices_Equipment"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Datos">
+  <rdf:type rdf:resource="#Assets"/>
+  <rdf:type rdf:resource="#Primary_Asset"/>
+  <rdf:type rdf:resource="#Info_Data"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Email">
+  <rdf:type rdf:resource="#Assets"/>
+  <rdf:type rdf:resource="#Primary_Asset"/>
+  <rdf:type rdf:resource="#Processes_Functions_Services"/>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#System_properties">
+  <rdf:type rdf:resource="#System"/>
+  <risk_acceptance rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VL</risk_acceptance>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Criterio_1_deployment_cost">
+  <rdf:type rdf:resource="#Criterio_Primer_Nivel"/>
+  <weight_value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</weight_value>
+  <is_divided rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</is_divided>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Criterio_1_mitigation_factor">
+  <rdf:type rdf:resource="#Criterio_Primer_Nivel"/>
+  <weight_value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.3</weight_value>
+  <is_divided rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</is_divided>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Criterio_1_effectiveness">
+  <rdf:type rdf:resource="#Criterio_Primer_Nivel"/>
+  <weight_value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.3</weight_value>
+  <is_divided rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</is_divided>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Criterio_1_rest">
+  <rdf:type rdf:resource="#Criterio_Primer_Nivel"/>
+  <has_subcriteria rdf:resource="#Criterio_2_time_to_be_up_and_running"/>
+  <has_subcriteria rdf:resource="#Criterio_2_deployment_effort"/>
+  <has_subcriteria rdf:resource="#Criterio_2_installation_complexity"/>
+  <has_subcriteria rdf:resource="#Criterio_2_operation_complexity"/>
+  <weight_value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</weight_value>
+  <is_divided rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_divided>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Criterio_2_time_to_be_up_and_running">
+  <rdf:type rdf:resource="#Criterio_Segundo_Nivel"/>
+  <is_subcriteria_of rdf:resource="#Criterio_1_rest"/>
+  <weight_value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.25</weight_value>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Criterio_2_deployment_effort">
+  <rdf:type rdf:resource="#Criterio_Segundo_Nivel"/>
+  <is_subcriteria_of rdf:resource="#Criterio_1_rest"/>
+  <weight_value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.25</weight_value>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Criterio_2_installation_complexity">
+  <rdf:type rdf:resource="#Criterio_Segundo_Nivel"/>
+  <is_subcriteria_of rdf:resource="#Criterio_1_rest"/>
+  <weight_value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.25</weight_value>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Criterio_2_operation_complexity">
+  <rdf:type rdf:resource="#Criterio_Segundo_Nivel"/>
+  <is_subcriteria_of rdf:resource="#Criterio_1_rest"/>
+  <weight_value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.25</weight_value>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#threat_Theft">
+  <rdf:type rdf:resource="#Threat"/>
+  <rdf:type rdf:resource="#Willfull_attacks"/>
+  <rdf:type rdf:resource="#Theft_of_Equipment"/>
+  <affects rdf:resource="#PC1"/>
+  <affects rdf:resource="#PC2"/>
+  <affects rdf:resource="#Movil"/>
+  <generates rdf:resource="#Theft_of_Equipment_Potential_Risk"/>
+  <probability rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H</probability>
+  <impact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</impact>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#threat_Access">
+  <rdf:type rdf:resource="#Threat"/>
+  <rdf:type rdf:resource="#Willfull_attacks"/>
+  <rdf:type rdf:resource="#Unauthorised_Access"/>
+  <affects rdf:resource="#PC1"/>
+  <affects rdf:resource="#PC2"/>
+  <affects rdf:resource="#Movil"/>
+  <generates rdf:resource="#Unauthorised_Access_Potential_Risk"/>
+  <probability rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</probability>
+  <impact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">L</impact>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#threat_Flood">
+  <rdf:type rdf:resource="#Threat"/>
+  <rdf:type rdf:resource="#Natural"/>
+  <rdf:type rdf:resource="#Flood"/>
+  <affects rdf:resource="#PC1"/>
+  <affects rdf:resource="#PC2"/>
+  <affects rdf:resource="#Movil"/>
+  <generates rdf:resource="#Flood_Potential_Risk"/>
+  <probability rdf:datatype="http://www.w3.org/2001/XMLSchema#string">L</probability>
+  <impact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H</impact>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Do_Nothing">
+  <rdf:type rdf:resource="#Mitigations"/>
+  <protects rdf:resource="#PC1"/>
+  <protects rdf:resource="#PC2"/>
+  <protects rdf:resource="#Movil"/>
+  <protects rdf:resource="#Datos"/>
+  <protects rdf:resource="#Email"/>
+  <reacts_against rdf:resource="#Unauthorised_Access_Potential_Risk"/>
+  <reacts_against rdf:resource="#Flood_Potential_Risk"/>
+  <reacts_against rdf:resource="#Theft_of_Equipment_Potential_Risk"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Do_Nothing</id>
+  <description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Do_Nothing</description>
+  <keywords rdf:datatype="http://www.w3.org/2001/XMLSchema#string">All</keywords>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Awareness</type>
+  <deployment_cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</deployment_cost>
+  <deployment_effort rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</deployment_effort>
+  <impact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VL</impact>
+  <installation_complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</installation_complexity>
+  <operation_complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</operation_complexity>
+  <mitigation_factor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</mitigation_factor>
+  <effectiveness rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</effectiveness>
+  <time_to_be_up_and_running rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</time_to_be_up_and_running>
+  <enabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</enabled>
+  <disabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</disabled>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#M1_control">
+  <rdf:type rdf:resource="#Mitigations"/>
+  <protects rdf:resource="#PC1"/>
+  <protects rdf:resource="#PC2"/>
+  <protects rdf:resource="#Movil"/>
+  <reacts_against rdf:resource="#Theft_of_Equipment_Potential_Risk"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M1_control</id>
+  <description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Physical access control systems</description>
+  <keywords rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Theft_of_Equipment</keywords>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Preventive</type>
+  <deployment_cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</deployment_cost>
+  <deployment_effort rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</deployment_effort>
+  <impact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">L</impact>
+  <installation_complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</installation_complexity>
+  <operation_complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</operation_complexity>
+  <mitigation_factor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</mitigation_factor>
+  <effectiveness rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</effectiveness>
+  <time_to_be_up_and_running rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</time_to_be_up_and_running>
+  <enabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</enabled>
+  <disabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</disabled>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#M2_CCTV">
+  <rdf:type rdf:resource="#Mitigations"/>
+  <protects rdf:resource="#PC1"/>
+  <protects rdf:resource="#PC2"/>
+  <protects rdf:resource="#Movil"/>
+  <reacts_against rdf:resource="#Theft_of_Equipment_Potential_Risk"/>
+  <generates rdf:resource="#Theft_of_Equipment_Residual_Risk"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M2_CCTV</id>
+  <description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CCTV surveillance and monitoring</description>
+  <keywords rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Theft_of_Equipment</keywords>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corrective</type>
+  <deployment_cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</deployment_cost>
+  <deployment_effort rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</deployment_effort>
+  <impact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">L</impact>
+  <installation_complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</installation_complexity>
+  <operation_complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</operation_complexity>
+  <mitigation_factor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</mitigation_factor>
+  <effectiveness rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</effectiveness>
+  <time_to_be_up_and_running rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</time_to_be_up_and_running>
+  <disabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</disabled>
+  <enabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</enabled>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#M3_MFA">
+  <rdf:type rdf:resource="#Mitigations"/>
+  <protects rdf:resource="#PC1"/>
+  <protects rdf:resource="#PC2"/>
+  <protects rdf:resource="#Movil"/>
+  <reacts_against rdf:resource="#Unauthorised_Access_Potential_Risk"/>
+  <generates rdf:resource="#Unauthorised_Access_Residual_Risk"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M3_MFA</id>
+  <description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Multifactor authentication</description>
+  <keywords rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unauthorised_Access</keywords>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Preventive</type>
+  <deployment_cost rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</deployment_cost>
+  <deployment_effort rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</deployment_effort>
+  <impact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">L</impact>
+  <installation_complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</installation_complexity>
+  <operation_complexity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</operation_complexity>
+  <mitigation_factor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</mitigation_factor>
+  <effectiveness rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</effectiveness>
+  <time_to_be_up_and_running rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</time_to_be_up_and_running>
+  <disabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</disabled>
+  <enabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</enabled>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Theft_of_Equipment_Potential_Risk">
+  <rdf:type rdf:resource="#Potential_Risk"/>
+  <related_to rdf:resource="#threat_Theft"/>
+  <is_affected_by rdf:resource="#M1_control"/>
+  <is_affected_by rdf:resource="#M2_CCTV"/>
+  <is_affected_by rdf:resource="#Do_Nothing"/>
+  <generates rdf:resource="#Theft_of_Equipment_Residual_Risk"/>
+  <probability rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H</probability>
+  <impact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</impact>
+  <risk_level_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</risk_level_num>
+  <risk_level rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VH</risk_level>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Unauthorised_Access_Potential_Risk">
+  <rdf:type rdf:resource="#Potential_Risk"/>
+  <related_to rdf:resource="#threat_Access"/>
+  <is_affected_by rdf:resource="#M3_MFA"/>
+  <is_affected_by rdf:resource="#Do_Nothing"/>
+  <generates rdf:resource="#Unauthorised_Access_Residual_Risk"/>
+  <probability rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</probability>
+  <impact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">L</impact>
+  <risk_level_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</risk_level_num>
+  <risk_level rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</risk_level>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Flood_Potential_Risk">
+  <rdf:type rdf:resource="#Potential_Risk"/>
+  <related_to rdf:resource="#threat_Flood"/>
+  <is_affected_by rdf:resource="#Do_Nothing"/>
+  <probability rdf:datatype="http://www.w3.org/2001/XMLSchema#string">L</probability>
+  <impact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H</impact>
+  <risk_level_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</risk_level_num>
+  <risk_level rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H</risk_level>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Theft_of_Equipment_Residual_Risk">
+  <rdf:type rdf:resource="#Residual_Risk"/>
+  <related_to rdf:resource="#Theft_of_Equipment_Potential_Risk"/>
+  <related_to rdf:resource="#M2_CCTV"/>
+  <residual_risk_level rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</residual_risk_level>
+  <residual_risk_level_num rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.799999999999999</residual_risk_level_num>
+  <residual_impact_num rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.1999999999999997</residual_impact_num>
+  <residual_probability_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</residual_probability_num>
+  <residual_impact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VL</residual_impact>
+  <residual_probability rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H</residual_probability>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="#Unauthorised_Access_Residual_Risk">
+  <rdf:type rdf:resource="#Residual_Risk"/>
+  <related_to rdf:resource="#Unauthorised_Access_Potential_Risk"/>
+  <related_to rdf:resource="#M3_MFA"/>
+  <residual_risk_level rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</residual_risk_level>
+  <residual_risk_level_num rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.38</residual_risk_level_num>
+  <residual_impact_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</residual_impact_num>
+  <residual_probability_num rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.46</residual_probability_num>
+  <residual_impact rdf:datatype="http://www.w3.org/2001/XMLSchema#string">L</residual_impact>
+  <residual_probability rdf:datatype="http://www.w3.org/2001/XMLSchema#string">L</residual_probability>
+</owl:NamedIndividual>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#HW_Devices_Equipment"/>
+    <rdf:Description rdf:about="#Infrastructure"/>
+    <rdf:Description rdf:about="#Location_Utilities"/>
+    <rdf:Description rdf:about="#Personnel"/>
+    <rdf:Description rdf:about="#SW_APPs"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#Fire_Natural"/>
+    <rdf:Description rdf:about="#Flood"/>
+    <rdf:Description rdf:about="#Major_Accident"/>
+    <rdf:Description rdf:about="#Other_Natural"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#Errors_and_unintentional_failure"/>
+    <rdf:Description rdf:about="#Industrial"/>
+    <rdf:Description rdf:about="#Natural"/>
+    <rdf:Description rdf:about="#Service_related_threats"/>
+    <rdf:Description rdf:about="#Willfull_attacks"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#Compromise_of_Service_Engine"/>
+    <rdf:Description rdf:about="#Data_Protection_Risks"/>
+    <rdf:Description rdf:about="#E-Discovery"/>
+    <rdf:Description rdf:about="#Incidence_Analysis_and_Forensic_Support"/>
+    <rdf:Description rdf:about="#Insecure_Interfaces_and_APIs"/>
+    <rdf:Description rdf:about="#Insecure_or_Ineffective_Deletion_of_Data"/>
+    <rdf:Description rdf:about="#Isolation_Failure"/>
+    <rdf:Description rdf:about="#Lock_in"/>
+    <rdf:Description rdf:about="#Loss_of_Governance"/>
+    <rdf:Description rdf:about="#Management_Interface_Compromise"/>
+    <rdf:Description rdf:about="#Risk_from_Changes_of_Jurisdiction"/>
+    <rdf:Description rdf:about="#User_Privacy_and_Secondary_Usage_of_Data"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#Communications_Services_Failure"/>
+    <rdf:Description rdf:about="#Electromagnetic_Emanations"/>
+    <rdf:Description rdf:about="#Electromagnetic_or_Thermal_Radiation"/>
+    <rdf:Description rdf:about="#Environmental_Pollution"/>
+    <rdf:Description rdf:about="#Fire_Industrial"/>
+    <rdf:Description rdf:about="#HW_or_SW_Failure"/>
+    <rdf:Description rdf:about="#Interruption_of_other_services"/>
+    <rdf:Description rdf:about="#Media_or_Equipment_Degradation"/>
+    <rdf:Description rdf:about="#Other_Industrial"/>
+    <rdf:Description rdf:about="#Power_Interruption"/>
+    <rdf:Description rdf:about="#Unsuitable_Temperature_or_Humidity_Conditions"/>
+    <rdf:Description rdf:about="#Water_Damage"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#Accidental_Alteration_of_Information"/>
+    <rdf:Description rdf:about="#Administrator_Errors"/>
+    <rdf:Description rdf:about="#Breach_of_Personnel_Availability"/>
+    <rdf:Description rdf:about="#Configuration_Errors"/>
+    <rdf:Description rdf:about="#Defects_in_HW_Maintenance"/>
+    <rdf:Description rdf:about="#Defects_in_SW_Maintenance"/>
+    <rdf:Description rdf:about="#Information_Leaks"/>
+    <rdf:Description rdf:about="#Monitoring_Errors"/>
+    <rdf:Description rdf:about="#Organisational_Deficiencies"/>
+    <rdf:Description rdf:about="#Re_Routing_Errors"/>
+    <rdf:Description rdf:about="#Retrieval_of_Recycled_Media"/>
+    <rdf:Description rdf:about="#Sequence_Errors"/>
+    <rdf:Description rdf:about="#Software_Vulnerabilities"/>
+    <rdf:Description rdf:about="#System_Failure_due_to_Exhaustion_of_Resources"/>
+    <rdf:Description rdf:about="#Unintentional_Destruction_of_Information"/>
+    <rdf:Description rdf:about="#Unintentional_Malware_Diffusion"/>
+    <rdf:Description rdf:about="#User_Errors"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+<owl:AllDisjointClasses>
+  <owl:members rdf:parseType="Collection">
+    <rdf:Description rdf:about="#Abuse_of_Access_Privileges"/>
+    <rdf:Description rdf:about="#Deliberate_Alteration_of_Information"/>
+    <rdf:Description rdf:about="#Deliberated_Destruction_of_Information"/>
+    <rdf:Description rdf:about="#Deliberated_Malware_Diffusion"/>
+    <rdf:Description rdf:about="#Deliberated_Re_Routing"/>
+    <rdf:Description rdf:about="#Destructive_Attack"/>
+    <rdf:Description rdf:about="#Disclosure_of_Information"/>
+    <rdf:Description rdf:about="#DoS"/>
+    <rdf:Description rdf:about="#Eavesdropping"/>
+    <rdf:Description rdf:about="#Enemy_Overrun"/>
+    <rdf:Description rdf:about="#Extortion"/>
+    <rdf:Description rdf:about="#HW_Tampering"/>
+    <rdf:Description rdf:about="#Manipulation_of_Activity_Records"/>
+    <rdf:Description rdf:about="#Manipulation_of_Configuration_Files"/>
+    <rdf:Description rdf:about="#Masquerading_of_Identity"/>
+    <rdf:Description rdf:about="#Misuse"/>
+    <rdf:Description rdf:about="#Repudiation"/>
+    <rdf:Description rdf:about="#SW_Tampering"/>
+    <rdf:Description rdf:about="#Sequence_Alteration"/>
+    <rdf:Description rdf:about="#Social_Engineering"/>
+    <rdf:Description rdf:about="#Staff_Shortage"/>
+    <rdf:Description rdf:about="#Theft_of_Equipment"/>
+    <rdf:Description rdf:about="#Theft_of_Media_Documents"/>
+    <rdf:Description rdf:about="#Traffic_Analysis"/>
+    <rdf:Description rdf:about="#Unauthorised_Access"/>
+  </owl:members>
+</owl:AllDisjointClasses>
+
+
+</rdf:RDF>

@@ -1,0 +1,22 @@
+[{
+    "id":"threat_Theft",
+    "class":"Willfull_attacks",
+    "type":"Theft_of_Equipment",
+    "affects":["HW"],
+    "probability":"H",
+    "impact":"M"
+},{
+    "id":"threat_Access",
+    "class":"Willfull_attacks",
+    "type":"Unauthorised_Access",
+    "affects":["HW"],
+    "probability":"M",
+    "impact":"L"
+},{
+    "id":"threat_Flood",
+    "class":"Natural",
+    "type":"Flood",
+    "affects":["HW"],
+    "probability":"L",
+    "impact":"H"
+}]

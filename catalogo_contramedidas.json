@@ -1,0 +1,70 @@
+[
+  {
+    "id": "Do_Nothing",
+    "description": "Do_Nothing",
+    "keywords": ["All"],
+    "type": "Awareness",
+    "impact": "VL",
+    "deployment_cost": 10,
+    "time_to_be_up_and_running": 10,
+    "mitigation_factor": 0,
+    "effectiveness": 0,
+    "deployment_effort": 0,
+    "installation_complexity": 0,
+    "operation_complexity":0,
+    "protected_assets": [
+      "All"
+    ]
+  },
+  {
+    "id": "M1_control",
+    "description": "Physical access control systems",
+    "keywords": ["Theft_of_Equipment"],
+    "type": "Preventive",
+    "impact": "L",
+    "deployment_cost": 5,
+    "time_to_be_up_and_running": 8,
+    "mitigation_factor": 7,
+    "effectiveness": 6,
+    "deployment_effort": 6,
+    "installation_complexity": 8,
+    "operation_complexity":7,
+    "protected_assets": [
+      "HW"
+    ]
+  },
+  {
+    "id": "M2_CCTV",
+    "description": "CCTV surveillance and monitoring",
+    "keywords": ["Theft_of_Equipment"],
+    "type": "Corrective",
+    "impact": "L",
+    "deployment_cost": 7,
+    "time_to_be_up_and_running": 9,
+    "mitigation_factor": 8,
+    "effectiveness": 7,
+    "deployment_effort": 6,
+    "installation_complexity": 5,
+    "operation_complexity":7,
+    "protected_assets": [
+      "HW"
+    ]
+  },
+  {
+    "id": "M3_MFA",
+    "description": "Multifactor authentication",
+    "keywords": ["Unauthorised_Access"],
+    "type": "Preventive",
+    "impact": "L",
+    "deployment_cost": 8,
+    "time_to_be_up_and_running": 5,
+    "mitigation_factor": 6,
+    "effectiveness": 3,
+    "deployment_effort": 7,
+    "installation_complexity": 5,
+    "operation_complexity":6,
+    "protected_assets": [
+      "HW"
+    ]
+  }
+]

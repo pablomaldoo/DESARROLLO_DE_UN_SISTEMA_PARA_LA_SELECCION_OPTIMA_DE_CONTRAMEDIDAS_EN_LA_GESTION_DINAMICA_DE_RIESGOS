@@ -1,0 +1,21 @@
+[{
+    "id":"PC1",
+    "class":"Supporting_Asset",
+    "type":"HW_Devices_Equipment"
+},{
+    "id":"PC2",
+    "class":"Supporting_Asset",
+    "type":"HW_Devices_Equipment"
+},{
+    "id":"Movil",
+    "class":"Supporting_Asset",
+    "type":"HW_Devices_Equipment"
+},{
+    "id":"Datos",
+    "class":"Primary_Asset",
+    "type":"Info_Data"
+},{
+    "id":"Email",
+    "class":"Primary_Asset",
+    "type":"Processes_Functions_Services"
+}]

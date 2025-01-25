@@ -1,0 +1,37 @@
+[{
+    "id":"System_properties",
+    "risk_acceptance":"VL"
+},{
+    "id":"Criterio_1_deployment_cost",
+    "weight_value":0.2,
+    "is_divided":false
+},{
+    "id":"Criterio_1_mitigation_factor",
+    "weight_value":0.3,
+    "is_divided":false
+},{
+    "id":"Criterio_1_effectiveness",
+    "weight_value":0.3,
+    "is_divided":false
+},{
+    "id":"Criterio_1_rest",
+    "weight_value":0.2,
+    "is_divided":true
+},{
+    "id":"Criterio_2_time_to_be_up_and_running",
+    "weight_value":0.25,
+    "is_subcriteria_of":"Criterio_1_rest"
+},{
+    "id":"Criterio_2_deployment_effort",
+    "weight_value":0.25,
+    "is_subcriteria_of":"Criterio_1_rest"
+},{
+    "id":"Criterio_2_installation_complexity",
+    "weight_value":0.25,
+    "is_subcriteria_of":"Criterio_1_rest"
+},{
+    "id":"Criterio_2_operation_complexity",
+    "weight_value":0.25,
+    "is_subcriteria_of":"Criterio_1_rest"
+}
+]
